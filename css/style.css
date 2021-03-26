@@ -1,0 +1,130 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #000000;
+  font-size: 20px;
+  margin-top: 5px;
+  padding: 0;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+}
+
+main{
+    padding: 10px;
+    background-color: #a0a09f;
+}
+
+header{
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 6fr 1fr;
+    background-color:  #000000;
+}
+
+header img{
+    height: 100px;
+    grid-column: 3/3;
+    vertical-align: auto;
+    border: solid 5px #000000;
+}
+
+.skip a{
+    background: white;
+    left: 0;
+    padding: 7px;
+    -webkit-transition: top 1s ease-out;
+    transition: top 1s ease-out;
+    z-index: 1;
+  
+    /*Your code here*/
+    position: absolute;
+    top: -50px;
+    
+  }
+
+.skip a:focus{
+    position: absolute;
+    top: 10px;
+  }
+
+h1{
+  font-size: 30px;
+  line-height: 1;
+  text-align: center;
+  grid-column: 2/2;
+  color: white;
+  padding-top: 5%;
+}
+
+h2{
+  font-size: 40px;
+  line-height: 1;
+  color: black;
+  margin-bottom: 5px;
+}
+
+nav li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.index nav a.index, .lineup nav a.lineup, .bullpen nav a.bullpen, .rotation nav a.rotation{
+    text-decoration: underline;
+}
+
+
+nav{
+  font-size: 24px;
+  grid-column: 1/1;
+}
+
+.intro{
+    padding: 2px;
+    border-bottom: solid 5px #000000;
+}
+
+
+footer{
+  background-color: black;
+  color: white;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.section-pic img{
+    width: 350px;
+    margin: 5px;
+    border: solid 5px #000000;
+}
+
+.player-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.player-pic img:hover{
+    width: 275px;
+}
+
+.player-box{
+    grid-template-columns: column;
+    border: solid 5px #000000;
+    margin: auto;
+    margin-top: 2px;
+}
+
+.player-descr{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
