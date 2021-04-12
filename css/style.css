@@ -6,7 +6,7 @@ body{
   background-color: #000000;
   font-size: 20px;
   margin-top: 5px;
-  padding: 0;
+  padding: 10px;
   text-align: center;
   font-family: 'Oswald', sans-serif;
 }
@@ -21,6 +21,7 @@ header{
     display: grid;
     grid-template-columns: 1fr 6fr 1fr;
     background-color:  #000000;
+    justify-items: center;
 }
 
 header img{
@@ -38,7 +39,6 @@ header img{
     transition: top 1s ease-out;
     z-index: 1;
   
-    /*Your code here*/
     position: absolute;
     top: -50px;
     
@@ -66,23 +66,25 @@ h2{
 }
 
 nav li{
-  display: flex;
-  flex-direction: row;
   justify-content: space-evenly;
 }
 
 nav a{
-    color: white;
-    text-decoration: none;
+  color: white;
+  text-decoration: none;
 }
 
-.index nav a.index, .lineup nav a.lineup, .bullpen nav a.bullpen, .rotation nav a.rotation{
-    text-decoration: underline;
+.index nav li.index, .lineup nav li.lineup, .bullpen nav li.bullpen, .rotation nav li.rotation{
+  background-color: #a0a09f;
+}
+
+.index nav li.index a, .lineup nav li.lineup a, .bullpen nav li.bullpen a, .rotation nav li.rotation a{
+  color: black;
 }
 
 
 nav{
-  font-size: 24px;
+  font-size: 28px;
   grid-column: 1/1;
 }
 
@@ -117,14 +119,79 @@ footer{
     width: 275px;
 }
 
+.player-pic img{
+  width: 250px;
+  height: 175px;
+}
+
 .player-box{
     grid-template-columns: column;
     border: solid 5px #000000;
     margin: auto;
     margin-top: 2px;
+    width: 350px;
 }
 
 .player-descr{
     padding-top: 10px;
     padding-bottom: 10px;
+}
+
+@media all and (min-width: 768px) {
+
+  .index nav li.index, .lineup nav li.lineup, .bullpen nav li.bullpen, 
+.rotation nav li.rotation, .index nav li.index a, .lineup nav li.lineup a, .bullpen nav li.bullpen a, .rotation nav li.rotation a{
+    text-decoration: underline;
+    text-decoration-color: black;
+    background-color: #a0a09f;
+    color: black;
+}
+
+  .nav_links{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    vertical-align: baseline;
+  }
+
+  .nav_links li.index a{
+    grid-column: 1/1;
+    padding: 8px;
+  }
+
+  .nav_links li.lineup a{
+    grid-column: 2/2;
+    padding: 8px;
+  }
+
+  .nav_links li.rotation a{
+    grid-column: 3/3;
+    padding: 8px;
+  }
+
+  .nav_links li.bullpen a{
+    grid-column: 4/4;
+    padding: 8px;
+  }
+
+
+  .player-box{
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .player-pic{
+    grid-row: 1/1;
+  }
+
+  .player-info{
+    grid-row: 2/2;
+  }
+
+  .player-descr{
+    grid-row: 3/3;
+  }
+
+  .player-sect{
+    width: 425px;
+  }
 }
