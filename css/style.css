@@ -239,3 +239,9 @@ footer{
 
 
 }
+
+@media (prefers-reduced-motion) {
+  .player-pic img:hover{
+    width: 250px;
+}
+}
