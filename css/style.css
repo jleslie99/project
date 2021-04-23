@@ -200,7 +200,7 @@ footer{
   }
 }
 
-@media all and (min-width: 1200px) {
+@media all and (min-width: 1000px) {
   .player-sect{
     display: grid;
     grid-template-columns: 2fr 3fr;
