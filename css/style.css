@@ -137,6 +137,10 @@ footer{
     padding-bottom: 10px;
 }
 
+.player-sect{
+  padding: 10px;
+}
+
 @media all and (min-width: 768px) {
 
   .index nav li.index, .lineup nav li.lineup, .bullpen nav li.bullpen, 
@@ -194,4 +198,44 @@ footer{
   .player-sect{
     width: 425px;
   }
+}
+
+@media all and (min-width: 1200px) {
+  .player-sect{
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    grid-template-rows: 1fr;
+    width: auto;
+    border: solid 5px #000000;
+    justify-content: center;
+    height: auto;
+  }
+
+  .player-box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 1/1;
+    border: none;
+    justify-items: center;
+  }
+
+  .player-descr{
+    grid-column: 2/2;
+    grid-row: 1/1;
+  }
+
+  .player-info{
+    grid-column: 1/1;
+    grid-row: 1/1;
+    margin: auto;
+    padding-right: 10px;
+  }
+
+  .player-pic{
+    grid-column: 2/2;
+    grid-row: 1/1;
+  }
+
+
 }
